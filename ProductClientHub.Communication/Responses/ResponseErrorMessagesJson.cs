@@ -15,5 +15,10 @@ namespace ProductClientHub.Communication.Responses
             //Errors = new List<string> { message };
             Errors = [message];
         }
+
+        public ResponseErrorMessagesJson(List<string> messages)
+        {
+            Errors = messages;
+        }
     }
 }
