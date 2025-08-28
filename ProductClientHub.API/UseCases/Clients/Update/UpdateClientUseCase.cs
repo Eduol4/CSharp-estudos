@@ -33,7 +33,7 @@ namespace ProductClientHub.API.UseCases.Clients.Update
 
             if (result.IsValid == false)
             {
-                var errors = result.Errors.Select(failure = AuthenticationFailureException.ErrorMessage).ToList();
+                var errors = result.Errors.Select(failure = failure.ErrorMessage).ToList();
 
                 throw new ErrorOnValidationException(errors);
             }
